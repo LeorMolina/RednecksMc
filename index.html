@@ -3,143 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website oficial do Rednecks MC, um moto clube dedicado à irmandade, estrada e respeito. Conheça nossa história, eventos e junte-se a nós.">
-    <meta name="keywords" content="Rednecks MC, Moto Clube Brasil, Moto Clube SP, Motociclismo Custom">
-    <title>Rednecks MC - Moto Clube Brasil</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Rednecks MC | Moto Clube</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="https://via.placeholder.com/250x150.png?text=Rednecks+MC+Logo" alt="Rednecks MC Logo" id="logo-img">
+        <div class="container">
+            <div class="header-content">
+                <nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul id="nav-menu">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Nossa História</a></li>
+                        <li><a href="#membros">Membros</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">O Clube / Quem Somos</a></li>
-            <li><a href="#events">Eventos</a></li>
-            <li><a href="#gallery">Galeria / Fotos e Vídeos</a></li>
-            <li><a href="#chapters">Capítulos / Franquias</a></li>
-            <li><a href="#memoriam">In Memoriam</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="home">
-            <h2>Bem-vindo ao Rednecks MC</h2>
-            <p>Fundado em [Ano de Fundação, ex: 2005], o Rednecks MC surgiu da paixão compartilhada pela estrada e pela verdadeira irmandade. Nascemos nas estradas de [Cidade/Estado de Origem, ex: São Paulo], com o ronco dos motores ecoando em cada quilômetro. Não somos apenas um clube, somos uma família unida pela liberdade de duas rodas e pelo compromisso com a lealdade e o respeito.</p>
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="slide fade">
-                        <img src="https://via.placeholder.com/800x400.png?text=Rednecks+MC+Event+1" style="width:100%">
-                    </div>
-                    <div class="slide fade">
-                        <img src="https://via.placeholder.com/800x400.png?text=Rednecks+MC+Event+2" style="width:100%">
-                    </div>
-                    <div class="slide fade">
-                        <img src="https://via.placeholder.com/800x400.png?text=Rednecks+MC+Event+3" style="width:100%">
-                    </div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <section id="inicio" class="parallax-section">
+        <div class="parallax-overlay">
+            <div class="container parallax-content">
+                <h1></h1>
+                <p></p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about">
-            <h2>O Clube / Quem Somos</h2>
-            <div class="about-content">
-                <h3>Nossa História</h3>
-                <p>"Fundado em [Ano de Fundação, ex: 2005], o Rednecks MC surgiu da paixão compartilhada pela estrada e pela verdadeira irmandade. Nascemos nas estradas de [Cidade/Estado de Origem, ex: São Paulo], com o ronco dos motores ecoando em cada quilômetro. Não somos apenas um clube, somos uma família unida pela liberdade de duas rodas e pelo compromisso com a lealdade e o respeito."</p>
-                <h3>Missão e Valores</h3>
-                <p>"Nossa missão é honrar os pilares do motociclismo tradicional: a irmandade inabalável, a paixão pela estrada sem fim, o respeito mútuo e a busca incessante por aventura. Valorizamos a lealdade acima de tudo, a liberdade de expressão e a dedicação à nossa comunidade biker."</p>
-            </div>
-        </section>
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Nossa História</h2>
+            <p>O Rednecks MC é um moto clube dedicado a promover a paixão pelas motocicletas, aventuras e a construção de uma comunidade de irmãos e irmãs na estrada. Fundado em [ano], nosso clube organiza eventos, passeios e atividades que unem amantes de motos de todas as idades.</p>
+        </div>
+    </section>
 
-        <section id="events">
-            <h2>Eventos</h2>
-            <div class="events-container">
-                <h3>Próximos Eventos</h3>
-                <ul>
-                    <li><strong>Evento 1:</strong> Data, Local, Detalhes</li>
-                    <li><strong>Evento 2:</strong> Data, Local, Detalhes</li>
-                </ul>
-                <h3>Eventos Anteriores</h3>
-                <div class="past-events-gallery">
-                    <img src="https://via.placeholder.com/400x300.png?text=Evento+Passado+1" alt="Evento Passado 1">
-                    <img src="https://via.placeholder.com/400x300.png?text=Evento+Passado+2" alt="Evento Passado 2">
-                </div>
+    <section id="membros" class="membros">
+        <div class="container">
+            <h2 class="section-title">Membros</h2>
+            <div class="membro">
+                <img src="img/membro1.png" alt="Membro 1">
+                <h3>Nome do Membro 1</h3>
+                <p>Descrição breve.</p>
             </div>
-        </section>
+            <div class="membro">
+                <img src="img/membro2.png" alt="Membro 2">
+                <h3>Nome do Membro 2</h3>
+                <p>Descrição breve.</p>
+            </div>
+            </div>
+    </section>
 
-        <section id="gallery">
-            <h2>Galeria / Fotos e Vídeos</h2>
-            <div class="gallery-container">
-                <h3>Nosso Instagram</h3>
-                <div class="embedsocial-widget" data-pro-id="YOUR_WIDGET_ID" style="width:100%; height: 500px;"></div>
-                <script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/pro_widget.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialProScript"));</script>
-            </div>
-        </section>
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galeria</h2>
+            <img src="C:\Development\siterednecksmc\RednecksMc\img\teste01.png" alt="Moto 1">
+            <img src="C:\Development\siterednecksmc\RednecksMc\img\teste02.png" alt="Moto 2">
+            <img src="C:\Development\siterednecksmc\RednecksMc\img\teste03.png" alt="Moto 3">
+            <img src="C:\Development\siterednecksmc\RednecksMc\img\teste03.png" alt="Grupo 1">
+            <img src="C:\Development\siterednecksmc\RednecksMc\img\teste02.png" alt="Grupo 2">
+            <img src="C:\Development\siterednecksmc\RednecksMc\img\teste01.png" alt="Grupo 3">
+        </div>
+    </section>
 
-        <section id="chapters">
-            <h2>Capítulos / Junte-se a Nós</h2>
-            <div class="chapters-content">
-                <h3>Nossos Capítulos</h3>
-                <ul>
-                    <li><strong>Capítulo São Paulo:</strong> @rednecksmc_sp</li>
-                    <!-- Adicionar outros capítulos se existirem -->
-                </ul>
-                <h3>Como Fazer Parte</h3>
-                <p>Interessado em se juntar à nossa irmandade? Entre em contato conosco através do formulário na seção de Contato para mais informações sobre o processo de recrutamento.</p>
-            </div>
-        </section>
-
-        <section id="memoriam">
-            <h2>In Memoriam</h2>
-            <div class="memoriam-container">
-                <div class="memoriam-member">
-                    <img src="https://via.placeholder.com/150" alt="Member Name">
-                    <p>Nome do Membro</p>
-                </div>
-                <div class="memoriam-member">
-                    <img src="https://via.placeholder.com/150" alt="Member Name">
-                    <p>Nome do Membro</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contato</h2>
-            <div class="contact-container">
-                <form action="#" method="POST">
-                    <input type="text" name="name" placeholder="Seu Nome" required>
-                    <input type="email" name="email" placeholder="Seu Email" required>
-                    <input type="text" name="subject" placeholder="Assunto" required>
-                    <textarea name="message" placeholder="Sua Mensagem" required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-                <div class="contact-info">
-                    <p>Email: contato@rednecksmc.com</p>
-                    <p>Telefone: (11) 99999-9999</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/rednecksmc_sp/" target="_blank">Instagram</a>
-                        <!-- Adicionar outros links de redes sociais se existirem -->
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <form action="#" method="post">
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Rednecks MC. Todos os direitos reservados.</p>
-        <div class="footer-social-links">
-            <a href="https://www.instagram.com/rednecksmc_sp/" target="_blank">Instagram</a>
-            <!-- Adicionar outros links de redes sociais se existirem -->
+        <div class="container">
+            <p>&copy; 2023 Rednecks MC. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
