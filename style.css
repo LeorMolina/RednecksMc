@@ -1,159 +1,343 @@
+/* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
 }
 
+/* Header Sticky */
 header {
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* CORREÇÃO: Centralização do Menu */
 .header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo (o menu) */
+    align-items: center;
+    width: 100%;
+}
+
+nav {
+    width: 100%; 
+    text-align: center;
+}
+
+/* Menu hambúrguer para mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os LI's */
 }
 
 nav ul li {
-  margin: 0 15px;
+    margin-left: 20px;
 }
 
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ccc;
+    color: #ccc;
 }
 
+/* Seção Parallax */
 .parallax-section {
-  background-image: url('img/testetopo.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
+    background-image: url('img/testetopo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
+.parallax-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.parallax-content p {
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Seções subsequentes */
 section {
-  padding: 100px 0;
+    padding: 100px 0;
+    background-color: #000;
+    color: #fff;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 36px;
-  text-transform: uppercase;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-transform: uppercase;
 }
 
+/* Estilos de Páragrafos Gerais em Seções de Conteúdo */
+.sobre p, .endereco-mapa p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 15px; /* Adiciona margem abaixo */
+    text-align: center;
+}
+
+/* NOVO: Grid para Membros/Eventos */
 .membros-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 40px; 
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+.membros .membro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0; 
+}
+
+/* Formato Stories para Imagens de Eventos/Membros */
 .membros img {
-  width: 169px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
-  border: 3px solid #e0e0e0;
+    width: 169px; 
+    height: 300px;
+    border-radius: 15px; 
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
 }
 
+/* --- Seção Galeria --- */
+
+/* Remove a declaração display: grid da section */
 .galeria {
-  background-color: #000;
+    padding: 100px 0;
+    background-color: #000;
+    color: #fff;
 }
 
+/* Aplicar Grid ao container que o JS está inserindo */
 .galeria-posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
 }
 
-.galeria-posts a {
-  display: block;
-  overflow: hidden;
-  border-radius: 10px;
+.galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.galeria-posts img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.4s;
-  border: 2px solid #222;
+/* --- Seção Contato (Mapas e Endereços) --- */
+
+.enderecos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 40px;
+    margin-bottom: 50px;
 }
 
-.galeria-posts img:hover {
-  transform: scale(1.05);
+.endereco-mapa {
+    background-color: #d30c0c; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Centraliza títulos e textos dentro do card */
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: auto;
+.endereco-mapa h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #333;
-  background: #111;
-  color: #fff;
-  border-radius: 5px;
+.endereco-mapa p {
+    color: #ccc;
+    font-size: 16px;
+    margin: 0 auto 5px; /* Ajuste a margem para não interferir no flex-align */
 }
 
-button {
-  background-color: #c00;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
+/* Garante que o iframe do Google Maps seja Responsivo (mantém a proporção 16:9) */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; 
+    position: relative;
+    height: 0;
+    margin-top: 15px;
 }
 
-button:hover {
-  background-color: #e00;
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 4px;
 }
 
+/* Estilização do Formulário */
+.contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato input, .contato textarea {
+    padding: 15px;
+    border: 1px solid #333;
+    background-color: #111;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contato button {
+    padding: 15px;
+    border: none;
+    background-color: #e00; /* Cor de destaque (vermelho) */
+    color: #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contato button:hover {
+    background-color: #c00;
+}
+
+
+/* Footer */
 footer {
-  background: #000;
-  text-align: center;
-  padding: 20px 0;
-  border-top: 1px solid #333;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
 }
 
+/* --- Responsividade --- */
 @media (max-width: 768px) {
-  .galeria-posts {
-    grid-template-columns: 1fr;
-  }
+    .header-content {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-right: 0; 
+    }
+
+    .parallax-content h1 {
+        font-size: 32px;
+    }
+
+    .parallax-content p {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    /* O grid fará o ajuste automático, mas é bom garantir o espaçamento */
+    .membros-grid, .enderecos-container {
+        grid-template-columns: 1fr; /* Força uma coluna em telas menores */
+    }
+
+    .galeria-posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax-content h1 {
+        font-size: 24px;
+    }
+
+    .parallax-content p {
+        font-size: 16px;
+    }
 }

@@ -12,6 +12,10 @@ function carregarGaleria() {
   if (!container) return;
 
   
+  while (container.children.length > 1) {
+    container.removeChild(container.lastChild);
+  }
+
   const grid = document.createElement("div");
   grid.className = "galeria-posts";
 
@@ -25,7 +29,8 @@ function carregarGaleria() {
     img.src = src;
     img.alt = "Foto da galeria";
 
-    img.onerror = () => link.remove();
+    
+    img.onerror = function() { link.remove(); };
 
     link.appendChild(img);
     grid.appendChild(link);
@@ -48,7 +53,7 @@ document.querySelectorAll("nav ul li a").forEach(anchor => {
     e.preventDefault();
     const targetId = this.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
-    if (targetElement) {
+    if (targetElement) {      
       window.scrollTo({
         top: targetElement.offsetTop - 60,
         behavior: "smooth"
