@@ -1,24 +1,63 @@
-// JavaScript para menu hambúrguer
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
+const imagensGaleria = [
+  "img/galeria/foto1.png",
+  "img/galeria/foto2.png",
+  "img/galeria/foto3.png",
+  "img/galeria/foto4.png",
+  "img/galeria/foto5.png",
+  "img/galeria/foto6.png"
+]
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+function carregarGaleria() {
+  const container = document.querySelector("#galeria .container");
+  if (!container) return;
+
+  
+  const grid = document.createElement("div");
+  grid.className = "galeria-posts";
+
+  
+  imagensGaleria.forEach(src => {
+    const link = document.createElement("a");
+    link.href = src;
+    link.target = "_blank";
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Foto da galeria";
+
+    img.onerror = () => link.remove();
+
+    link.appendChild(img);
+    grid.appendChild(link);
+  });
+
+  container.appendChild(grid);
+}
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
+
+document.querySelectorAll("nav ul li a").forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 60,
+        behavior: "smooth"
+      });
+    }
+    if (navMenu.classList.contains("active")) {
+      navMenu.classList.remove("active");
+    }
+  });
 });
 
-// Smooth scroll para links de navegação
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        window.scrollTo({
-            top: targetElement.offsetTop - 60, // Ajuste para header sticky
-            behavior: 'smooth'
-        });
-        // Fechar menu mobile após clique
-        if (navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-        }
-    });
-});
+document.addEventListener("DOMContentLoaded", carregarGaleria);
