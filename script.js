@@ -39,6 +39,7 @@ function carregarGaleria() {
   container.appendChild(grid);
 }
 
+
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 

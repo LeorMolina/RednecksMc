@@ -165,7 +165,6 @@ section {
 
 /* --- Seção Galeria --- */
 
-/* Remove a declaração display: grid da section */
 .galeria {
     padding: 100px 0;
     background-color: #000;
@@ -188,6 +187,121 @@ section {
     border-radius: 8px;
 }
 
+/* --- NOVO: Seção Redes Sociais (Instagram Profile Cards) --- */
+.redessociais {
+    padding: 100px 0;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap; 
+}
+
+.social-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: #0a0a0a;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333; 
+}
+
+/* Estilos Específicos do Card de Perfil Instagram */
+.instagram-profile-card {
+    padding: 20px;
+    text-align: left; /* Alinhamento do conteúdo interno */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Círculo */
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #e00; /* Borda de destaque */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info .username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.profile-info .website {
+    font-size: 14px;
+    color: #888;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e00; /* Cor de destaque para os números */
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+.instagram-button.follow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Degradê do Instagram */
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+}
+
+.instagram-button.follow-button:hover {
+    background-color: #c00; /* Fallback em hover, embora o degradê seja melhor */
+    opacity: 0.9;
+}
+
+.instagram-icon {
+    fill: white;
+    width: 18px;
+    height: 18px;
+}
+
+
 /* --- Seção Contato (Mapas e Endereços) --- */
 
 .enderecos-container {
@@ -202,7 +316,7 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center; /* Centraliza títulos e textos dentro do card */
+    text-align: center; 
 }
 
 .endereco-mapa h3 {
@@ -214,7 +328,7 @@ section {
 .endereco-mapa p {
     color: #ccc;
     font-size: 16px;
-    margin: 0 auto 5px; /* Ajuste a margem para não interferir no flex-align */
+    margin: 0 auto 5px; 
 }
 
 /* Garante que o iframe do Google Maps seja Responsivo (mantém a proporção 16:9) */
@@ -256,7 +370,7 @@ section {
 .contato button {
     padding: 15px;
     border: none;
-    background-color: #e00; /* Cor de destaque (vermelho) */
+    background-color: #e00; 
     color: #fff;
     border-radius: 4px;
     font-size: 18px;
@@ -320,6 +434,16 @@ footer {
 
     .section-title {
         font-size: 28px;
+    }
+    
+    .social-links-container {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .social-card {
+        max-width: 90%; 
     }
 
     /* O grid fará o ajuste automático, mas é bom garantir o espaçamento */
